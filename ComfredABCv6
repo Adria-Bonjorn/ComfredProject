@@ -1,0 +1,170 @@
+# CODE FOR HVAC MACHINE SELECTION****By: Adrià Bonjorn Cervera - July 2021
+
+#This script is meant to help selecting an AC machine by calculating recommended powers
+#for different situations for given areas to air condition. Empirical coefficients based on
+#personal experience are used to aproximate the solutions.
+#In order to make it more user friendly, the script pops a desktop window created with
+#QtDesign and manipulated with PyQt5. The window allows the user to introduce the required
+#data and also displays de results.
+
+from PyQt5 import QtCore, QtGui, QtWidgets, uic
+
+# import function "ceil" from library "math"
+from math import ceil
+
+
+# Construction of the window
+class MyWindow(QtWidgets.QMainWindow):
+    # Class construction method
+    def __init__(self):
+        # Initialize MyWindow object
+        super().__init__()
+        # Load UI file
+        uic.loadUi('UIComfredABC.ui', self)
+
+        # Setting combobox options
+        self.InsulationSelector.addItems(["Bó", "Regular", "Dolent"])
+        self.ModeSelector.addItems(["Fred", "Calor", "Fred + Calor"])
+
+        # Split1x1 calculate button
+        self.CalculateButton1x1.clicked.connect(self.Split1x1)
+
+        # Add button
+        self.ButtonAddAreaDuctList.clicked.connect(self.AreaList)
+
+        # Duct Power calculate button
+        self.CalculateButtonDuct.clicked.connect(self.Duct)
+
+        # Duct rooms calculate button
+        self.CalculateRoomsButton.clicked.connect(self.DuctRooms)
+
+        # Reset button to clear the table
+        self.ResetButton.clicked.connect(self.Reset)
+
+    # Split1x1 function calculate the total power recommended to select the Split 1x1 Type Machine
+    def Split1x1(self):
+
+        Area1x1Value = int(self.Area1x1.toPlainText())
+
+        if self.InsulationSelector.currentText() == "Bó":
+            InsulationCoefficient = 1
+        elif self.InsulationSelector.currentText() == "Regular":
+            InsulationCoefficient = 1.1
+        else:
+            InsulationCoefficient = 1.2
+
+        if self.ModeSelector.currentText() == 'Fred':
+            ModeCoefficient = 1.1
+        else:
+            ModeCoefficient = 1.2
+
+        Power1x1Value = Area1x1Value * InsulationCoefficient * ModeCoefficient / 10
+
+        Power1x1Value = round(Power1x1Value, 2)
+
+        self.Power1x1.setText(str(Power1x1Value))
+
+    # AreaList function adds the values entered by the user into the table
+    def AreaList(self):
+        row = 0
+        if self.AreaDuct.toPlainText() != '':
+
+            NewArea = self.AreaDuct.toPlainText()
+
+            for row in range(15):
+
+                if self.RoomTable.item(row, 0) is None:
+                    self.RoomTable.setItem(row, 0, QtWidgets.QTableWidgetItem(NewArea))
+                    break
+                else:
+                    row = row + 1
+            self.AreaDuct.setText('')
+        self.AreaDuct.setFocus()
+
+    # Duct function calculate the total power recommended to select the Duct Type Machine
+    def Duct(self):
+
+        if self.InsulationSelector.currentText() == "Bó":
+            InsulationCoefficient = 1
+        elif self.InsulationSelector.currentText() == "Regular":
+            InsulationCoefficient = 1.1
+        else:
+            InsulationCoefficient = 1.2
+
+        if self.ModeSelector.currentText() == 'Fred':
+            ModeCoefficient = 1.1
+        else:
+            ModeCoefficient = 1.2
+
+        Areas = []
+
+        for row in range(15):
+
+            if self.RoomTable.item(row, 0) is not None:
+                Item = self.RoomTable.item(row, 0)
+                Item_text = Item.text()
+                Areas.append(Item_text)
+
+        Areas = [int(x) for x in Areas]
+        AreaDuctValue = sum(Areas)
+
+        PowerDuctValue = AreaDuctValue * InsulationCoefficient * ModeCoefficient / 10
+
+        PowerDuctValue = round(PowerDuctValue, 2)
+
+        self.PowerDuct.setText(str(PowerDuctValue))
+
+    # DuctRooms function calculate the grill size and proportional flow of air for each room
+    def DuctRooms(self):
+
+        MachineFlowValue = int(self.MachineFlow.toPlainText())/3600
+        AirVelocityValue = float(self.AirVelocity.toPlainText())
+        MaxHeightGrillValue = int(self.MaxHeightGrill.toPlainText())/1000
+
+        Areas = []
+
+        for row in range(15):
+
+            if self.RoomTable.item(row, 0) is not None:
+                Item = self.RoomTable.item(row, 0)
+                Item_text = Item.text()
+                Areas.append(Item_text)
+
+        Areas = [float(x) for x in Areas]
+        TotalArea = sum(Areas)
+        RoomFlow = [0] * len(Areas)
+        RoomWidth = [0] * len(Areas)
+        RoomHeight = [0] * len(Areas)
+        RoomFlow = [float(x) for x in RoomFlow]
+        RoomWidth = [float(x) for x in RoomWidth]
+        RoomHeight = [float(x) for x in RoomHeight]
+
+        for room in range(len(Areas)):
+            RoomHeight[room] = round(MaxHeightGrillValue*1000,0)
+            RoomWidth[room] = 1000 * MachineFlowValue * Areas[room] / TotalArea / AirVelocityValue / MaxHeightGrillValue
+            RoomWidth[room] = ceil(RoomWidth[room] / 50) * 50
+            RoomFlow[room] = round(MachineFlowValue * (Areas[room] / TotalArea) * 3600,2)
+            self.RoomTable.setItem(room, 1, QtWidgets.QTableWidgetItem(str(RoomFlow[room])))
+            self.RoomTable.setItem(room, 2, QtWidgets.QTableWidgetItem(str(RoomWidth[room]) + " x " + str(RoomHeight[room])))
+
+
+    # Reset function clear the table, but actually what it does is destroy and reconstruct the table
+    def Reset(self):
+
+        self.RoomTable.setRowCount(0)
+        self.RoomTable.setRowCount(15)
+
+        self.RoomTable.setVerticalHeaderLabels(['Sala 1', 'Sala 2', 'Sala 3', 'Sala 4', 'Sala 5', 'Sala 6', 'Sala 7', 'Sala 8', 'Sala 9', 'Sala 10', 'Sala 11', 'Sala 12', 'Sala 13', 'Sala 14', 'Sala 15'])
+
+# Main function that initiates the application
+if __name__ == '__main__':
+    import sys
+
+    # Initiate application
+    app = QtWidgets.QApplication(sys.argv)
+    window = MyWindow()
+    window.show()
+
+    # Execute application
+    sys.exit(app.exec_())
+
