@@ -1,0 +1,656 @@
+# -*- coding: utf-8 -*-
+
+################################################################################
+## Form generated from reading UI file 'UIComfredABCdefHRvefS.ui'
+##
+## Created by: Qt User Interface Compiler version 5.14.1
+##
+## WARNING! All changes made in this file will be lost when recompiling UI file!
+################################################################################
+
+from PySide2.QtCore import (QCoreApplication, QMetaObject, QObject, QPoint,
+    QRect, QSize, QUrl, Qt)
+from PySide2.QtGui import (QBrush, QColor, QConicalGradient, QCursor, QFont,
+    QFontDatabase, QIcon, QLinearGradient, QPalette, QPainter, QPixmap,
+    QRadialGradient)
+from PySide2.QtWidgets import *
+
+import comfredlogo_rc
+
+class Ui_MainWindow(object):
+    def setupUi(self, MainWindow):
+        if MainWindow.objectName():
+            MainWindow.setObjectName(u"MainWindow")
+        MainWindow.resize(1897, 877)
+        font = QFont()
+        font.setFamily(u"Arial")
+        font.setPointSize(10)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
+        MainWindow.setFont(font)
+        MainWindow.setStyleSheet(u"background-color: rgb(227, 227, 227);\n"
+"font: 10pt \"Arial\";")
+        self.centralwidget = QWidget(MainWindow)
+        self.centralwidget.setObjectName(u"centralwidget")
+        self.comboBox = QComboBox(self.centralwidget)
+        self.comboBox.setObjectName(u"comboBox")
+        self.comboBox.setGeometry(QRect(-90, 160, 69, 22))
+        self.InsulationSelector = QComboBox(self.centralwidget)
+        self.InsulationSelector.setObjectName(u"InsulationSelector")
+        self.InsulationSelector.setGeometry(QRect(90, 140, 101, 22))
+        self.InsulationSelector.setStyleSheet(u"background-color: rgb(255, 255, 255);")
+        self.ModeSelector = QComboBox(self.centralwidget)
+        self.ModeSelector.setObjectName(u"ModeSelector")
+        self.ModeSelector.setGeometry(QRect(360, 140, 101, 22))
+        self.ModeSelector.setStyleSheet(u"background-color: rgb(255, 255, 255);")
+        self.label = QLabel(self.centralwidget)
+        self.label.setObjectName(u"label")
+        self.label.setGeometry(QRect(20, 140, 71, 21))
+        self.label_2 = QLabel(self.centralwidget)
+        self.label_2.setObjectName(u"label_2")
+        self.label_2.setGeometry(QRect(220, 140, 131, 21))
+        self.label_3 = QLabel(self.centralwidget)
+        self.label_3.setObjectName(u"label_3")
+        self.label_3.setGeometry(QRect(20, 241, 141, 20))
+        self.Power1x1 = QTextBrowser(self.centralwidget)
+        self.Power1x1.setObjectName(u"Power1x1")
+        self.Power1x1.setGeometry(QRect(180, 280, 71, 31))
+        self.Power1x1.setStyleSheet(u"border-color: rgb(0, 0, 255);\n"
+"border-color: rgb(255, 255, 255);\n"
+"background-color: rgb(187, 194, 200);")
+        self.Power1x1.setLineWidth(10)
+        self.label_4 = QLabel(self.centralwidget)
+        self.label_4.setObjectName(u"label_4")
+        self.label_4.setGeometry(QRect(20, 290, 151, 21))
+        self.CalculateButton1x1 = QPushButton(self.centralwidget)
+        self.CalculateButton1x1.setObjectName(u"CalculateButton1x1")
+        self.CalculateButton1x1.setGeometry(QRect(260, 280, 75, 23))
+        self.CalculateButton1x1.setStyleSheet(u"background-color: rgb(98, 192, 255);")
+        self.Area1x1 = QTextEdit(self.centralwidget)
+        self.Area1x1.setObjectName(u"Area1x1")
+        self.Area1x1.setGeometry(QRect(180, 230, 71, 31))
+        self.Area1x1.setStyleSheet(u"background-color: rgb(255, 255, 255);")
+        self.label_5 = QLabel(self.centralwidget)
+        self.label_5.setObjectName(u"label_5")
+        self.label_5.setGeometry(QRect(20, 110, 121, 21))
+        self.label_5.setStyleSheet(u"text-decoration: underline;\n"
+"font: 75 12pt \"Arial\";")
+        self.label_6 = QLabel(self.centralwidget)
+        self.label_6.setObjectName(u"label_6")
+        self.label_6.setGeometry(QRect(20, 210, 121, 21))
+        self.label_6.setStyleSheet(u"text-decoration: underline;\n"
+"font: 75 12pt \"Arial\";")
+        self.label_7 = QLabel(self.centralwidget)
+        self.label_7.setObjectName(u"label_7")
+        self.label_7.setGeometry(QRect(20, 360, 121, 21))
+        self.label_7.setStyleSheet(u"font: 12pt \"Arial\";\n"
+"text-decoration: underline;\n"
+"font: 75 12pt \"Arial\";")
+        self.label_8 = QLabel(self.centralwidget)
+        self.label_8.setObjectName(u"label_8")
+        self.label_8.setGeometry(QRect(20, 410, 181, 21))
+        self.CalculateButtonDuct = QPushButton(self.centralwidget)
+        self.CalculateButtonDuct.setObjectName(u"CalculateButtonDuct")
+        self.CalculateButtonDuct.setGeometry(QRect(300, 450, 75, 23))
+        self.CalculateButtonDuct.setStyleSheet(u"background-color: rgb(98, 192, 255);")
+        self.PowerDuct = QTextBrowser(self.centralwidget)
+        self.PowerDuct.setObjectName(u"PowerDuct")
+        self.PowerDuct.setGeometry(QRect(220, 450, 71, 31))
+        self.PowerDuct.setStyleSheet(u"background-color: rgb(187, 194, 200);")
+        self.ButtonAddAreaDuctList = QPushButton(self.centralwidget)
+        self.ButtonAddAreaDuctList.setObjectName(u"ButtonAddAreaDuctList")
+        self.ButtonAddAreaDuctList.setGeometry(QRect(300, 400, 75, 23))
+        self.ButtonAddAreaDuctList.setStyleSheet(u"background-color: rgb(98, 192, 255);")
+        self.RoomTable = QTableWidget(self.centralwidget)
+        if (self.RoomTable.columnCount() < 3):
+            self.RoomTable.setColumnCount(3)
+        __qtablewidgetitem = QTableWidgetItem()
+        self.RoomTable.setHorizontalHeaderItem(0, __qtablewidgetitem)
+        __qtablewidgetitem1 = QTableWidgetItem()
+        self.RoomTable.setHorizontalHeaderItem(1, __qtablewidgetitem1)
+        __qtablewidgetitem2 = QTableWidgetItem()
+        self.RoomTable.setHorizontalHeaderItem(2, __qtablewidgetitem2)
+        if (self.RoomTable.rowCount() < 15):
+            self.RoomTable.setRowCount(15)
+        __qtablewidgetitem3 = QTableWidgetItem()
+        self.RoomTable.setVerticalHeaderItem(0, __qtablewidgetitem3)
+        __qtablewidgetitem4 = QTableWidgetItem()
+        self.RoomTable.setVerticalHeaderItem(1, __qtablewidgetitem4)
+        __qtablewidgetitem5 = QTableWidgetItem()
+        self.RoomTable.setVerticalHeaderItem(2, __qtablewidgetitem5)
+        __qtablewidgetitem6 = QTableWidgetItem()
+        self.RoomTable.setVerticalHeaderItem(3, __qtablewidgetitem6)
+        __qtablewidgetitem7 = QTableWidgetItem()
+        self.RoomTable.setVerticalHeaderItem(4, __qtablewidgetitem7)
+        __qtablewidgetitem8 = QTableWidgetItem()
+        self.RoomTable.setVerticalHeaderItem(5, __qtablewidgetitem8)
+        __qtablewidgetitem9 = QTableWidgetItem()
+        self.RoomTable.setVerticalHeaderItem(6, __qtablewidgetitem9)
+        __qtablewidgetitem10 = QTableWidgetItem()
+        self.RoomTable.setVerticalHeaderItem(7, __qtablewidgetitem10)
+        __qtablewidgetitem11 = QTableWidgetItem()
+        self.RoomTable.setVerticalHeaderItem(8, __qtablewidgetitem11)
+        __qtablewidgetitem12 = QTableWidgetItem()
+        self.RoomTable.setVerticalHeaderItem(9, __qtablewidgetitem12)
+        __qtablewidgetitem13 = QTableWidgetItem()
+        self.RoomTable.setVerticalHeaderItem(10, __qtablewidgetitem13)
+        __qtablewidgetitem14 = QTableWidgetItem()
+        self.RoomTable.setVerticalHeaderItem(11, __qtablewidgetitem14)
+        __qtablewidgetitem15 = QTableWidgetItem()
+        self.RoomTable.setVerticalHeaderItem(12, __qtablewidgetitem15)
+        __qtablewidgetitem16 = QTableWidgetItem()
+        self.RoomTable.setVerticalHeaderItem(13, __qtablewidgetitem16)
+        __qtablewidgetitem17 = QTableWidgetItem()
+        self.RoomTable.setVerticalHeaderItem(14, __qtablewidgetitem17)
+        self.RoomTable.setObjectName(u"RoomTable")
+        self.RoomTable.setGeometry(QRect(400, 400, 511, 401))
+        self.RoomTable.setStyleSheet(u"background-color: rgb(255, 255, 255);\n"
+"font: 10pt \"Arial\";")
+        self.RoomTable.horizontalHeader().setVisible(True)
+        self.RoomTable.horizontalHeader().setMinimumSectionSize(50)
+        self.RoomTable.horizontalHeader().setDefaultSectionSize(150)
+        self.RoomTable.verticalHeader().setDefaultSectionSize(24)
+        self.AreaDuct = QTextEdit(self.centralwidget)
+        self.AreaDuct.setObjectName(u"AreaDuct")
+        self.AreaDuct.setGeometry(QRect(220, 400, 71, 31))
+        self.AreaDuct.setStyleSheet(u"background-color: rgb(255, 255, 255);")
+        self.label_9 = QLabel(self.centralwidget)
+        self.label_9.setObjectName(u"label_9")
+        self.label_9.setGeometry(QRect(20, 460, 151, 21))
+        self.label_10 = QLabel(self.centralwidget)
+        self.label_10.setObjectName(u"label_10")
+        self.label_10.setGeometry(QRect(20, 541, 211, 20))
+        self.MachineFlow = QTextEdit(self.centralwidget)
+        self.MachineFlow.setObjectName(u"MachineFlow")
+        self.MachineFlow.setGeometry(QRect(270, 531, 71, 31))
+        self.MachineFlow.setStyleSheet(u"background-color: rgb(255, 255, 255);")
+        self.MaxHeightGrill = QTextEdit(self.centralwidget)
+        self.MaxHeightGrill.setObjectName(u"MaxHeightGrill")
+        self.MaxHeightGrill.setGeometry(QRect(270, 630, 71, 31))
+        self.MaxHeightGrill.setStyleSheet(u"background-color: rgb(255, 255, 255);")
+        self.label_11 = QLabel(self.centralwidget)
+        self.label_11.setObjectName(u"label_11")
+        self.label_11.setGeometry(QRect(20, 640, 211, 20))
+        self.CalculateRoomsButton = QPushButton(self.centralwidget)
+        self.CalculateRoomsButton.setObjectName(u"CalculateRoomsButton")
+        self.CalculateRoomsButton.setGeometry(QRect(270, 690, 75, 23))
+        self.CalculateRoomsButton.setStyleSheet(u"background-color: rgb(98, 192, 255);")
+        self.label_12 = QLabel(self.centralwidget)
+        self.label_12.setObjectName(u"label_12")
+        self.label_12.setGeometry(QRect(20, 690, 241, 20))
+        self.AirVelocity = QTextEdit(self.centralwidget)
+        self.AirVelocity.setObjectName(u"AirVelocity")
+        self.AirVelocity.setGeometry(QRect(270, 580, 71, 31))
+        self.AirVelocity.setStyleSheet(u"background-color: rgb(255, 255, 255);")
+        self.label_13 = QLabel(self.centralwidget)
+        self.label_13.setObjectName(u"label_13")
+        self.label_13.setGeometry(QRect(20, 590, 201, 20))
+        self.label_14 = QLabel(self.centralwidget)
+        self.label_14.setObjectName(u"label_14")
+        self.label_14.setGeometry(QRect(20, 500, 351, 21))
+        self.ResetButton = QPushButton(self.centralwidget)
+        self.ResetButton.setObjectName(u"ResetButton")
+        self.ResetButton.setGeometry(QRect(270, 740, 75, 23))
+        self.ResetButton.setStyleSheet(u"background-color: rgb(98, 192, 255);")
+        self.label_15 = QLabel(self.centralwidget)
+        self.label_15.setObjectName(u"label_15")
+        self.label_15.setGeometry(QRect(20, 740, 241, 20))
+        self.frame = QFrame(self.centralwidget)
+        self.frame.setObjectName(u"frame")
+        self.frame.setGeometry(QRect(0, 80, 911, 16))
+        self.frame.setStyleSheet(u"background-color: rgb(0, 85, 255);")
+        self.frame.setFrameShape(QFrame.StyledPanel)
+        self.frame.setFrameShadow(QFrame.Raised)
+        self.frame_2 = QFrame(self.centralwidget)
+        self.frame_2.setObjectName(u"frame_2")
+        self.frame_2.setGeometry(QRect(0, 180, 911, 16))
+        self.frame_2.setStyleSheet(u"background-color: rgb(0, 85, 255);")
+        self.frame_2.setFrameShape(QFrame.StyledPanel)
+        self.frame_2.setFrameShadow(QFrame.Raised)
+        self.frame_3 = QFrame(self.centralwidget)
+        self.frame_3.setObjectName(u"frame_3")
+        self.frame_3.setGeometry(QRect(0, 330, 911, 16))
+        self.frame_3.setStyleSheet(u"background-color: rgb(0, 85, 255);")
+        self.frame_3.setFrameShape(QFrame.StyledPanel)
+        self.frame_3.setFrameShadow(QFrame.Raised)
+        self.frame_4 = QFrame(self.frame_3)
+        self.frame_4.setObjectName(u"frame_4")
+        self.frame_4.setGeometry(QRect(0, 0, 911, 16))
+        self.frame_4.setStyleSheet(u"background-color: rgb(0, 85, 255);")
+        self.frame_4.setFrameShape(QFrame.StyledPanel)
+        self.frame_4.setFrameShadow(QFrame.Raised)
+        self.frame_5 = QFrame(self.centralwidget)
+        self.frame_5.setObjectName(u"frame_5")
+        self.frame_5.setGeometry(QRect(0, 836, 2011, 20))
+        self.frame_5.setStyleSheet(u"background-color: rgb(0, 85, 255);")
+        self.frame_5.setFrameShape(QFrame.StyledPanel)
+        self.frame_5.setFrameShadow(QFrame.Raised)
+        self.label_17 = QLabel(self.centralwidget)
+        self.label_17.setObjectName(u"label_17")
+        self.label_17.setGeometry(QRect(720, 10, 181, 21))
+        self.label_18 = QLabel(self.centralwidget)
+        self.label_18.setObjectName(u"label_18")
+        self.label_18.setGeometry(QRect(720, 40, 181, 21))
+        self.line = QFrame(self.centralwidget)
+        self.line.setObjectName(u"line")
+        self.line.setGeometry(QRect(380, 400, 20, 411))
+        self.line.setFrameShape(QFrame.VLine)
+        self.line.setFrameShadow(QFrame.Sunken)
+        self.line_2 = QFrame(self.centralwidget)
+        self.line_2.setObjectName(u"line_2")
+        self.line_2.setGeometry(QRect(10, 490, 361, 16))
+        self.line_2.setFrameShape(QFrame.HLine)
+        self.line_2.setFrameShadow(QFrame.Sunken)
+        self.line_3 = QFrame(self.centralwidget)
+        self.line_3.setObjectName(u"line_3")
+        self.line_3.setGeometry(QRect(10, 670, 361, 16))
+        self.line_3.setFrameShape(QFrame.HLine)
+        self.line_3.setFrameShadow(QFrame.Sunken)
+        self.label_19 = QLabel(self.centralwidget)
+        self.label_19.setObjectName(u"label_19")
+        self.label_19.setGeometry(QRect(20, 30, 321, 41))
+        self.label_19.setStyleSheet(u"background-image: url(:/aaa/comfredlogo.png);")
+        self.label_19.setPixmap(QPixmap(u":/aaa/comfredlogo.png"))
+        self.label_19.setScaledContents(True)
+        self.frame_6 = QFrame(self.centralwidget)
+        self.frame_6.setObjectName(u"frame_6")
+        self.frame_6.setGeometry(QRect(910, 80, 16, 781))
+        self.frame_6.setStyleSheet(u"background-color: rgb(0, 85, 255);")
+        self.frame_6.setFrameShape(QFrame.StyledPanel)
+        self.frame_6.setFrameShadow(QFrame.Raised)
+        self.label_16 = QLabel(self.centralwidget)
+        self.label_16.setObjectName(u"label_16")
+        self.label_16.setGeometry(QRect(950, 110, 131, 21))
+        self.label_16.setStyleSheet(u"text-decoration: underline;\n"
+"font: 75 12pt \"Arial\";")
+        self.frame_7 = QFrame(self.centralwidget)
+        self.frame_7.setObjectName(u"frame_7")
+        self.frame_7.setGeometry(QRect(920, 80, 941, 16))
+        self.frame_7.setStyleSheet(u"background-color: rgb(0, 85, 255);")
+        self.frame_7.setFrameShape(QFrame.StyledPanel)
+        self.frame_7.setFrameShadow(QFrame.Raised)
+        self.AproxPower = QTextEdit(self.centralwidget)
+        self.AproxPower.setObjectName(u"AproxPower")
+        self.AproxPower.setGeometry(QRect(1580, 230, 71, 31))
+        self.AproxPower.setStyleSheet(u"background-color: rgb(255, 255, 255);")
+        self.label_20 = QLabel(self.centralwidget)
+        self.label_20.setObjectName(u"label_20")
+        self.label_20.setGeometry(QRect(1350, 240, 221, 20))
+        self.label_21 = QLabel(self.centralwidget)
+        self.label_21.setObjectName(u"label_21")
+        self.label_21.setGeometry(QRect(950, 160, 221, 20))
+        self.PlateArea = QTextEdit(self.centralwidget)
+        self.PlateArea.setObjectName(u"PlateArea")
+        self.PlateArea.setGeometry(QRect(1180, 150, 71, 31))
+        self.PlateArea.setStyleSheet(u"background-color: rgb(255, 255, 255);")
+        self.Oversize = QTextEdit(self.centralwidget)
+        self.Oversize.setObjectName(u"Oversize")
+        self.Oversize.setGeometry(QRect(1180, 190, 71, 31))
+        self.Oversize.setStyleSheet(u"background-color: rgb(255, 255, 255);")
+        self.label_22 = QLabel(self.centralwidget)
+        self.label_22.setObjectName(u"label_22")
+        self.label_22.setGeometry(QRect(950, 200, 221, 20))
+        self.PipeLenghtCircuit = QTextEdit(self.centralwidget)
+        self.PipeLenghtCircuit.setObjectName(u"PipeLenghtCircuit")
+        self.PipeLenghtCircuit.setGeometry(QRect(1180, 230, 71, 31))
+        self.PipeLenghtCircuit.setStyleSheet(u"background-color: rgb(255, 255, 255);")
+        self.label_23 = QLabel(self.centralwidget)
+        self.label_23.setObjectName(u"label_23")
+        self.label_23.setGeometry(QRect(950, 240, 221, 20))
+        self.ThermalDif = QTextEdit(self.centralwidget)
+        self.ThermalDif.setObjectName(u"ThermalDif")
+        self.ThermalDif.setGeometry(QRect(1580, 150, 71, 31))
+        self.ThermalDif.setStyleSheet(u"background-color: rgb(255, 255, 255);")
+        self.label_24 = QLabel(self.centralwidget)
+        self.label_24.setObjectName(u"label_24")
+        self.label_24.setGeometry(QRect(1350, 160, 221, 20))
+        self.label_25 = QLabel(self.centralwidget)
+        self.label_25.setObjectName(u"label_25")
+        self.label_25.setGeometry(QRect(1350, 200, 221, 20))
+        self.AreaPerCircuit = QTextEdit(self.centralwidget)
+        self.AreaPerCircuit.setObjectName(u"AreaPerCircuit")
+        self.AreaPerCircuit.setGeometry(QRect(1580, 190, 71, 31))
+        self.AreaPerCircuit.setStyleSheet(u"background-color: rgb(255, 255, 255);")
+        self.RoomTableTR = QTableWidget(self.centralwidget)
+        if (self.RoomTableTR.columnCount() < 7):
+            self.RoomTableTR.setColumnCount(7)
+        __qtablewidgetitem18 = QTableWidgetItem()
+        __qtablewidgetitem18.setTextAlignment(Qt.AlignCenter);
+        self.RoomTableTR.setHorizontalHeaderItem(0, __qtablewidgetitem18)
+        __qtablewidgetitem19 = QTableWidgetItem()
+        __qtablewidgetitem19.setTextAlignment(Qt.AlignCenter);
+        self.RoomTableTR.setHorizontalHeaderItem(1, __qtablewidgetitem19)
+        __qtablewidgetitem20 = QTableWidgetItem()
+        __qtablewidgetitem20.setTextAlignment(Qt.AlignCenter);
+        self.RoomTableTR.setHorizontalHeaderItem(2, __qtablewidgetitem20)
+        __qtablewidgetitem21 = QTableWidgetItem()
+        __qtablewidgetitem21.setTextAlignment(Qt.AlignCenter);
+        self.RoomTableTR.setHorizontalHeaderItem(3, __qtablewidgetitem21)
+        __qtablewidgetitem22 = QTableWidgetItem()
+        __qtablewidgetitem22.setTextAlignment(Qt.AlignCenter);
+        self.RoomTableTR.setHorizontalHeaderItem(4, __qtablewidgetitem22)
+        __qtablewidgetitem23 = QTableWidgetItem()
+        __qtablewidgetitem23.setTextAlignment(Qt.AlignCenter);
+        self.RoomTableTR.setHorizontalHeaderItem(5, __qtablewidgetitem23)
+        __qtablewidgetitem24 = QTableWidgetItem()
+        __qtablewidgetitem24.setTextAlignment(Qt.AlignCenter);
+        self.RoomTableTR.setHorizontalHeaderItem(6, __qtablewidgetitem24)
+        if (self.RoomTableTR.rowCount() < 15):
+            self.RoomTableTR.setRowCount(15)
+        __qtablewidgetitem25 = QTableWidgetItem()
+        self.RoomTableTR.setVerticalHeaderItem(0, __qtablewidgetitem25)
+        __qtablewidgetitem26 = QTableWidgetItem()
+        self.RoomTableTR.setVerticalHeaderItem(1, __qtablewidgetitem26)
+        __qtablewidgetitem27 = QTableWidgetItem()
+        self.RoomTableTR.setVerticalHeaderItem(2, __qtablewidgetitem27)
+        __qtablewidgetitem28 = QTableWidgetItem()
+        self.RoomTableTR.setVerticalHeaderItem(3, __qtablewidgetitem28)
+        __qtablewidgetitem29 = QTableWidgetItem()
+        self.RoomTableTR.setVerticalHeaderItem(4, __qtablewidgetitem29)
+        __qtablewidgetitem30 = QTableWidgetItem()
+        self.RoomTableTR.setVerticalHeaderItem(5, __qtablewidgetitem30)
+        __qtablewidgetitem31 = QTableWidgetItem()
+        self.RoomTableTR.setVerticalHeaderItem(6, __qtablewidgetitem31)
+        __qtablewidgetitem32 = QTableWidgetItem()
+        self.RoomTableTR.setVerticalHeaderItem(7, __qtablewidgetitem32)
+        __qtablewidgetitem33 = QTableWidgetItem()
+        self.RoomTableTR.setVerticalHeaderItem(8, __qtablewidgetitem33)
+        __qtablewidgetitem34 = QTableWidgetItem()
+        self.RoomTableTR.setVerticalHeaderItem(9, __qtablewidgetitem34)
+        __qtablewidgetitem35 = QTableWidgetItem()
+        self.RoomTableTR.setVerticalHeaderItem(10, __qtablewidgetitem35)
+        __qtablewidgetitem36 = QTableWidgetItem()
+        self.RoomTableTR.setVerticalHeaderItem(11, __qtablewidgetitem36)
+        __qtablewidgetitem37 = QTableWidgetItem()
+        self.RoomTableTR.setVerticalHeaderItem(12, __qtablewidgetitem37)
+        __qtablewidgetitem38 = QTableWidgetItem()
+        self.RoomTableTR.setVerticalHeaderItem(13, __qtablewidgetitem38)
+        __qtablewidgetitem39 = QTableWidgetItem()
+        self.RoomTableTR.setVerticalHeaderItem(14, __qtablewidgetitem39)
+        self.RoomTableTR.setObjectName(u"RoomTableTR")
+        self.RoomTableTR.setGeometry(QRect(950, 340, 941, 391))
+        self.RoomTableTR.setStyleSheet(u"background-color: rgb(255, 255, 255);\n"
+"font: 10pt \"Arial\";")
+        self.RoomTableTR.horizontalHeader().setVisible(True)
+        self.RoomTableTR.horizontalHeader().setMinimumSectionSize(50)
+        self.RoomTableTR.horizontalHeader().setDefaultSectionSize(125)
+        self.RoomTableTR.verticalHeader().setDefaultSectionSize(24)
+        self.RoomTableTRTotal = QTableWidget(self.centralwidget)
+        if (self.RoomTableTRTotal.columnCount() < 7):
+            self.RoomTableTRTotal.setColumnCount(7)
+        __qtablewidgetitem40 = QTableWidgetItem()
+        self.RoomTableTRTotal.setHorizontalHeaderItem(0, __qtablewidgetitem40)
+        __qtablewidgetitem41 = QTableWidgetItem()
+        self.RoomTableTRTotal.setHorizontalHeaderItem(1, __qtablewidgetitem41)
+        __qtablewidgetitem42 = QTableWidgetItem()
+        self.RoomTableTRTotal.setHorizontalHeaderItem(2, __qtablewidgetitem42)
+        __qtablewidgetitem43 = QTableWidgetItem()
+        self.RoomTableTRTotal.setHorizontalHeaderItem(3, __qtablewidgetitem43)
+        __qtablewidgetitem44 = QTableWidgetItem()
+        self.RoomTableTRTotal.setHorizontalHeaderItem(4, __qtablewidgetitem44)
+        __qtablewidgetitem45 = QTableWidgetItem()
+        self.RoomTableTRTotal.setHorizontalHeaderItem(5, __qtablewidgetitem45)
+        __qtablewidgetitem46 = QTableWidgetItem()
+        self.RoomTableTRTotal.setHorizontalHeaderItem(6, __qtablewidgetitem46)
+        if (self.RoomTableTRTotal.rowCount() < 1):
+            self.RoomTableTRTotal.setRowCount(1)
+        __qtablewidgetitem47 = QTableWidgetItem()
+        self.RoomTableTRTotal.setVerticalHeaderItem(0, __qtablewidgetitem47)
+        self.RoomTableTRTotal.setObjectName(u"RoomTableTRTotal")
+        self.RoomTableTRTotal.setGeometry(QRect(950, 740, 941, 51))
+        self.RoomTableTRTotal.setStyleSheet(u"background-color: rgb(255, 255, 255);\n"
+"font: 10pt \"Arial\";")
+        self.RoomTableTRTotal.horizontalHeader().setVisible(True)
+        self.RoomTableTRTotal.horizontalHeader().setMinimumSectionSize(50)
+        self.RoomTableTRTotal.horizontalHeader().setDefaultSectionSize(125)
+        self.RoomTableTRTotal.verticalHeader().setDefaultSectionSize(24)
+        self.ResetButtonTR = QPushButton(self.centralwidget)
+        self.ResetButtonTR.setObjectName(u"ResetButtonTR")
+        self.ResetButtonTR.setGeometry(QRect(1310, 300, 75, 23))
+        self.ResetButtonTR.setStyleSheet(u"background-color: rgb(98, 192, 255);")
+        self.label_27 = QLabel(self.centralwidget)
+        self.label_27.setObjectName(u"label_27")
+        self.label_27.setGeometry(QRect(970, 280, 121, 21))
+        self.AreaTR = QTextEdit(self.centralwidget)
+        self.AreaTR.setObjectName(u"AreaTR")
+        self.AreaTR.setGeometry(QRect(990, 300, 71, 31))
+        self.AreaTR.setStyleSheet(u"background-color: rgb(255, 255, 255);")
+        self.ButtonAddRoomTR = QPushButton(self.centralwidget)
+        self.ButtonAddRoomTR.setObjectName(u"ButtonAddRoomTR")
+        self.ButtonAddRoomTR.setGeometry(QRect(1220, 300, 75, 23))
+        self.ButtonAddRoomTR.setStyleSheet(u"background-color: rgb(98, 192, 255);")
+        self.label_28 = QLabel(self.centralwidget)
+        self.label_28.setObjectName(u"label_28")
+        self.label_28.setGeometry(QRect(1120, 280, 121, 21))
+        self.label_29 = QLabel(self.centralwidget)
+        self.label_29.setObjectName(u"label_29")
+        self.label_29.setGeometry(QRect(960, 810, 161, 21))
+        self.Colector1 = QTextBrowser(self.centralwidget)
+        self.Colector1.setObjectName(u"Colector1")
+        self.Colector1.setGeometry(QRect(1160, 800, 71, 31))
+        self.Colector1.setStyleSheet(u"background-color: rgb(187, 194, 200);")
+        self.label_30 = QLabel(self.centralwidget)
+        self.label_30.setObjectName(u"label_30")
+        self.label_30.setGeometry(QRect(1310, 810, 161, 21))
+        self.Colector2 = QTextBrowser(self.centralwidget)
+        self.Colector2.setObjectName(u"Colector2")
+        self.Colector2.setGeometry(QRect(1510, 800, 71, 31))
+        self.Colector2.setStyleSheet(u"background-color: rgb(187, 194, 200);")
+        self.CalculateTRButton = QPushButton(self.centralwidget)
+        self.CalculateTRButton.setObjectName(u"CalculateTRButton")
+        self.CalculateTRButton.setGeometry(QRect(1400, 300, 75, 23))
+        self.CalculateTRButton.setStyleSheet(u"background-color: rgb(98, 192, 255);\n"
+"")
+        self.RoomFloor = QComboBox(self.centralwidget)
+        self.RoomFloor.addItem("")
+        self.RoomFloor.addItem("")
+        self.RoomFloor.setObjectName(u"RoomFloor")
+        self.RoomFloor.setGeometry(QRect(1110, 300, 101, 22))
+        self.RoomFloor.setStyleSheet(u"background-color: rgb(255, 255, 255);")
+        MainWindow.setCentralWidget(self.centralwidget)
+        self.statusbar = QStatusBar(MainWindow)
+        self.statusbar.setObjectName(u"statusbar")
+        MainWindow.setStatusBar(self.statusbar)
+
+        self.retranslateUi(MainWindow)
+
+        QMetaObject.connectSlotsByName(MainWindow)
+    # setupUi
+
+    def retranslateUi(self, MainWindow):
+        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
+        self.label.setText(QCoreApplication.translate("MainWindow", u"A\u00efllament", None))
+        self.label_2.setText(QCoreApplication.translate("MainWindow", u"Mode de funcionament", None))
+        self.label_3.setText(QCoreApplication.translate("MainWindow", u"Superficie sala [m2]", None))
+        self.label_4.setText(QCoreApplication.translate("MainWindow", u"Pot\u00e8ncia recomanda [kW]", None))
+        self.CalculateButton1x1.setText(QCoreApplication.translate("MainWindow", u"Calcular", None))
+        self.Area1x1.setHtml(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Arial'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>", None))
+        self.label_5.setText(QCoreApplication.translate("MainWindow", u"GENERAL", None))
+        self.label_6.setText(QCoreApplication.translate("MainWindow", u"SPLIT 1x1", None))
+        self.label_7.setText(QCoreApplication.translate("MainWindow", u"CONDUCTES", None))
+        self.label_8.setText(QCoreApplication.translate("MainWindow", u"Superficies de cada sala [m2]", None))
+        self.CalculateButtonDuct.setText(QCoreApplication.translate("MainWindow", u"Calcular", None))
+        self.ButtonAddAreaDuctList.setText(QCoreApplication.translate("MainWindow", u"Afegir", None))
+        ___qtablewidgetitem = self.RoomTable.horizontalHeaderItem(0)
+        ___qtablewidgetitem.setText(QCoreApplication.translate("MainWindow", u"Superficie[m2]", None));
+        ___qtablewidgetitem1 = self.RoomTable.horizontalHeaderItem(1)
+        ___qtablewidgetitem1.setText(QCoreApplication.translate("MainWindow", u"Cabal[m3/h]", None));
+        ___qtablewidgetitem2 = self.RoomTable.horizontalHeaderItem(2)
+        ___qtablewidgetitem2.setText(QCoreApplication.translate("MainWindow", u"Reixa[mm x mm]", None));
+        ___qtablewidgetitem3 = self.RoomTable.verticalHeaderItem(0)
+        ___qtablewidgetitem3.setText(QCoreApplication.translate("MainWindow", u"Sala 1", None));
+        ___qtablewidgetitem4 = self.RoomTable.verticalHeaderItem(1)
+        ___qtablewidgetitem4.setText(QCoreApplication.translate("MainWindow", u"Sala 2", None));
+        ___qtablewidgetitem5 = self.RoomTable.verticalHeaderItem(2)
+        ___qtablewidgetitem5.setText(QCoreApplication.translate("MainWindow", u"Sala 3", None));
+        ___qtablewidgetitem6 = self.RoomTable.verticalHeaderItem(3)
+        ___qtablewidgetitem6.setText(QCoreApplication.translate("MainWindow", u"Sala 4", None));
+        ___qtablewidgetitem7 = self.RoomTable.verticalHeaderItem(4)
+        ___qtablewidgetitem7.setText(QCoreApplication.translate("MainWindow", u"Sala 5", None));
+        ___qtablewidgetitem8 = self.RoomTable.verticalHeaderItem(5)
+        ___qtablewidgetitem8.setText(QCoreApplication.translate("MainWindow", u"Sala 6", None));
+        ___qtablewidgetitem9 = self.RoomTable.verticalHeaderItem(6)
+        ___qtablewidgetitem9.setText(QCoreApplication.translate("MainWindow", u"Sala 7", None));
+        ___qtablewidgetitem10 = self.RoomTable.verticalHeaderItem(7)
+        ___qtablewidgetitem10.setText(QCoreApplication.translate("MainWindow", u"Sala 8", None));
+        ___qtablewidgetitem11 = self.RoomTable.verticalHeaderItem(8)
+        ___qtablewidgetitem11.setText(QCoreApplication.translate("MainWindow", u"Sala 9", None));
+        ___qtablewidgetitem12 = self.RoomTable.verticalHeaderItem(9)
+        ___qtablewidgetitem12.setText(QCoreApplication.translate("MainWindow", u"Sala 10", None));
+        ___qtablewidgetitem13 = self.RoomTable.verticalHeaderItem(10)
+        ___qtablewidgetitem13.setText(QCoreApplication.translate("MainWindow", u"Sala 11", None));
+        ___qtablewidgetitem14 = self.RoomTable.verticalHeaderItem(11)
+        ___qtablewidgetitem14.setText(QCoreApplication.translate("MainWindow", u"Sala 12", None));
+        ___qtablewidgetitem15 = self.RoomTable.verticalHeaderItem(12)
+        ___qtablewidgetitem15.setText(QCoreApplication.translate("MainWindow", u"Sala 13", None));
+        ___qtablewidgetitem16 = self.RoomTable.verticalHeaderItem(13)
+        ___qtablewidgetitem16.setText(QCoreApplication.translate("MainWindow", u"Sala 14", None));
+        ___qtablewidgetitem17 = self.RoomTable.verticalHeaderItem(14)
+        ___qtablewidgetitem17.setText(QCoreApplication.translate("MainWindow", u"Sala 15", None));
+        self.label_9.setText(QCoreApplication.translate("MainWindow", u"Pot\u00e8ncia recomanda [kW]", None))
+        self.label_10.setText(QCoreApplication.translate("MainWindow", u"Cabal m\u00e0quina seleccionada [m3/h]", None))
+        self.MachineFlow.setHtml(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Arial'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">2000</p></body></html>", None))
+        self.MaxHeightGrill.setHtml(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Arial'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">150</p></body></html>", None))
+        self.label_11.setText(QCoreApplication.translate("MainWindow", u"Altura m\u00e0xima reixes [mm]", None))
+        self.CalculateRoomsButton.setText(QCoreApplication.translate("MainWindow", u"Calcular", None))
+        self.label_12.setText(QCoreApplication.translate("MainWindow", u"Reixes i cabal per cada sala (veure taula)", None))
+        self.AirVelocity.setHtml(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Arial'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">2.5</p></body></html>", None))
+        self.label_13.setText(QCoreApplication.translate("MainWindow", u"Velocitat sortida aire [m/s]", None))
+        self.label_14.setText(QCoreApplication.translate("MainWindow", u"Utilitza la pot\u00e8ncia recomanda per seleccionar una m\u00e0quina.", None))
+        self.ResetButton.setText(QCoreApplication.translate("MainWindow", u"Reset", None))
+        self.label_15.setText(QCoreApplication.translate("MainWindow", u"Esborrar taula", None))
+        self.label_17.setText(QCoreApplication.translate("MainWindow", u"ADRI\u00c0 BONJORN CERVERA", None))
+        self.label_18.setText(QCoreApplication.translate("MainWindow", u"JUL-2021", None))
+        self.label_19.setText("")
+        self.label_16.setText(QCoreApplication.translate("MainWindow", u"TERRA RADIANT", None))
+        self.AproxPower.setHtml(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Arial'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
+"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">100</p></body></html>", None))
+        self.label_20.setText(QCoreApplication.translate("MainWindow", u"Pot\u00e8ncia t\u00e8rmica aproximada [W/m2]", None))
+        self.label_21.setText(QCoreApplication.translate("MainWindow", u"Superf\u00edcie d'una placa [m2]", None))
+        self.PlateArea.setHtml(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Arial'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
+"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">1.17</p></body></html>", None))
+        self.Oversize.setHtml(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Arial'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
+"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">20</p></body></html>", None))
+        self.label_22.setText(QCoreApplication.translate("MainWindow", u"Sobredimensionament [%]", None))
+        self.PipeLenghtCircuit.setHtml(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Arial'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
+"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">100</p></body></html>", None))
+        self.label_23.setText(QCoreApplication.translate("MainWindow", u"Longitud de tub per cada circuit [m]", None))
+        self.ThermalDif.setHtml(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Arial'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
+"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">5</p></body></html>", None))
+        self.label_24.setText(QCoreApplication.translate("MainWindow", u"Salt t\u00e8rmic [\u00baC]", None))
+        self.label_25.setText(QCoreApplication.translate("MainWindow", u"Superf\u00edcie coberta per circuit [m2]", None))
+        self.AreaPerCircuit.setHtml(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Arial'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
+"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">9</p></body></html>", None))
+        ___qtablewidgetitem18 = self.RoomTableTR.horizontalHeaderItem(0)
+        ___qtablewidgetitem18.setText(QCoreApplication.translate("MainWindow", u"Superficie[m2]", None));
+        ___qtablewidgetitem19 = self.RoomTableTR.horizontalHeaderItem(1)
+        ___qtablewidgetitem19.setText(QCoreApplication.translate("MainWindow", u"Planta [-]", None));
+        ___qtablewidgetitem20 = self.RoomTableTR.horizontalHeaderItem(2)
+        ___qtablewidgetitem20.setText(QCoreApplication.translate("MainWindow", u"N\u00ba plaques [-]", None));
+        ___qtablewidgetitem21 = self.RoomTableTR.horizontalHeaderItem(3)
+        ___qtablewidgetitem21.setText(QCoreApplication.translate("MainWindow", u"N\u00baCircuits [-]", None));
+        ___qtablewidgetitem22 = self.RoomTableTR.horizontalHeaderItem(4)
+        ___qtablewidgetitem22.setText(QCoreApplication.translate("MainWindow", u"Long. Tub [m]", None));
+        ___qtablewidgetitem23 = self.RoomTableTR.horizontalHeaderItem(5)
+        ___qtablewidgetitem23.setText(QCoreApplication.translate("MainWindow", u"Pot\u00e8ncia [kW]", None));
+        ___qtablewidgetitem24 = self.RoomTableTR.horizontalHeaderItem(6)
+        ___qtablewidgetitem24.setText(QCoreApplication.translate("MainWindow", u"Cabal [m3/h]", None));
+        ___qtablewidgetitem25 = self.RoomTableTR.verticalHeaderItem(0)
+        ___qtablewidgetitem25.setText(QCoreApplication.translate("MainWindow", u"Sala 1", None));
+        ___qtablewidgetitem26 = self.RoomTableTR.verticalHeaderItem(1)
+        ___qtablewidgetitem26.setText(QCoreApplication.translate("MainWindow", u"Sala 2", None));
+        ___qtablewidgetitem27 = self.RoomTableTR.verticalHeaderItem(2)
+        ___qtablewidgetitem27.setText(QCoreApplication.translate("MainWindow", u"Sala 3", None));
+        ___qtablewidgetitem28 = self.RoomTableTR.verticalHeaderItem(3)
+        ___qtablewidgetitem28.setText(QCoreApplication.translate("MainWindow", u"Sala 4", None));
+        ___qtablewidgetitem29 = self.RoomTableTR.verticalHeaderItem(4)
+        ___qtablewidgetitem29.setText(QCoreApplication.translate("MainWindow", u"Sala 5", None));
+        ___qtablewidgetitem30 = self.RoomTableTR.verticalHeaderItem(5)
+        ___qtablewidgetitem30.setText(QCoreApplication.translate("MainWindow", u"Sala 6", None));
+        ___qtablewidgetitem31 = self.RoomTableTR.verticalHeaderItem(6)
+        ___qtablewidgetitem31.setText(QCoreApplication.translate("MainWindow", u"Sala 7", None));
+        ___qtablewidgetitem32 = self.RoomTableTR.verticalHeaderItem(7)
+        ___qtablewidgetitem32.setText(QCoreApplication.translate("MainWindow", u"Sala 8", None));
+        ___qtablewidgetitem33 = self.RoomTableTR.verticalHeaderItem(8)
+        ___qtablewidgetitem33.setText(QCoreApplication.translate("MainWindow", u"Sala 9", None));
+        ___qtablewidgetitem34 = self.RoomTableTR.verticalHeaderItem(9)
+        ___qtablewidgetitem34.setText(QCoreApplication.translate("MainWindow", u"Sala 10", None));
+        ___qtablewidgetitem35 = self.RoomTableTR.verticalHeaderItem(10)
+        ___qtablewidgetitem35.setText(QCoreApplication.translate("MainWindow", u"Sala 11", None));
+        ___qtablewidgetitem36 = self.RoomTableTR.verticalHeaderItem(11)
+        ___qtablewidgetitem36.setText(QCoreApplication.translate("MainWindow", u"Sala 12", None));
+        ___qtablewidgetitem37 = self.RoomTableTR.verticalHeaderItem(12)
+        ___qtablewidgetitem37.setText(QCoreApplication.translate("MainWindow", u"Sala 13", None));
+        ___qtablewidgetitem38 = self.RoomTableTR.verticalHeaderItem(13)
+        ___qtablewidgetitem38.setText(QCoreApplication.translate("MainWindow", u"Sala 14", None));
+        ___qtablewidgetitem39 = self.RoomTableTR.verticalHeaderItem(14)
+        ___qtablewidgetitem39.setText(QCoreApplication.translate("MainWindow", u"Sala 15", None));
+        ___qtablewidgetitem40 = self.RoomTableTRTotal.horizontalHeaderItem(0)
+        ___qtablewidgetitem40.setText(QCoreApplication.translate("MainWindow", u"Superficie[m2]", None));
+        ___qtablewidgetitem41 = self.RoomTableTRTotal.horizontalHeaderItem(1)
+        ___qtablewidgetitem41.setText(QCoreApplication.translate("MainWindow", u"Planta [-]", None));
+        ___qtablewidgetitem42 = self.RoomTableTRTotal.horizontalHeaderItem(2)
+        ___qtablewidgetitem42.setText(QCoreApplication.translate("MainWindow", u"N\u00ba plaques [-]", None));
+        ___qtablewidgetitem43 = self.RoomTableTRTotal.horizontalHeaderItem(3)
+        ___qtablewidgetitem43.setText(QCoreApplication.translate("MainWindow", u"N\u00baCircuits [-]", None));
+        ___qtablewidgetitem44 = self.RoomTableTRTotal.horizontalHeaderItem(4)
+        ___qtablewidgetitem44.setText(QCoreApplication.translate("MainWindow", u"Long. Tub [m]", None));
+        ___qtablewidgetitem45 = self.RoomTableTRTotal.horizontalHeaderItem(5)
+        ___qtablewidgetitem45.setText(QCoreApplication.translate("MainWindow", u"Pot\u00e8ncia [kW]", None));
+        ___qtablewidgetitem46 = self.RoomTableTRTotal.horizontalHeaderItem(6)
+        ___qtablewidgetitem46.setText(QCoreApplication.translate("MainWindow", u"Cabal [m3/h]", None));
+        ___qtablewidgetitem47 = self.RoomTableTRTotal.verticalHeaderItem(0)
+        ___qtablewidgetitem47.setText(QCoreApplication.translate("MainWindow", u"    Total", None));
+        self.ResetButtonTR.setText(QCoreApplication.translate("MainWindow", u"Reset", None))
+        self.label_27.setText(QCoreApplication.translate("MainWindow", u"Superficie sala [m2]", None))
+        self.AreaTR.setHtml(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Arial'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
+"<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>", None))
+        self.ButtonAddRoomTR.setText(QCoreApplication.translate("MainWindow", u"Afegir", None))
+        self.label_28.setText(QCoreApplication.translate("MainWindow", u"Planta sala [-]", None))
+        self.label_29.setText(QCoreApplication.translate("MainWindow", u"Vies col\u00b7lector Planta 1 [-]", None))
+        self.label_30.setText(QCoreApplication.translate("MainWindow", u"Vies col\u00b7lector Planta 2 [-]", None))
+        self.CalculateTRButton.setText(QCoreApplication.translate("MainWindow", u"Calcular", None))
+        self.RoomFloor.setItemText(0, QCoreApplication.translate("MainWindow", u"1", None))
+        self.RoomFloor.setItemText(1, QCoreApplication.translate("MainWindow", u"2", None))
+
+    # retranslateUi
+
+
