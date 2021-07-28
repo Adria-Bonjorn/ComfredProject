@@ -20,7 +20,7 @@ class MyWindow(QtWidgets.QMainWindow):
         # Initialize MyWindow object
         super().__init__()
         # Load UI file
-        uic.loadUi('UIComfredABC.ui', self)
+        uic.loadUi('UIComfredABCdef.ui', self)
 
         # Setting combobox options
         self.InsulationSelector.addItems(["Bó", "Regular", "Dolent"])
@@ -40,6 +40,15 @@ class MyWindow(QtWidgets.QMainWindow):
 
         # Reset button to clear the table
         self.ResetButton.clicked.connect(self.Reset)
+
+        # Add button
+        self.ButtonAddRoomTR.clicked.connect(self.AddRoomTR)
+
+        # CalculateTRButton activates the function CalculateTR
+        self.CalculateTRButton.clicked.connect(self.CalculateTR)
+
+        # Reset button to clear the thermal floor table
+        self.ResetButtonTR.clicked.connect(self.ResetTR)
 
     # Split1x1 function calculate the total power recommended to select the Split 1x1 Type Machine
     def Split1x1(self):
@@ -80,6 +89,28 @@ class MyWindow(QtWidgets.QMainWindow):
                     row = row + 1
             self.AreaDuct.setText('')
         self.AreaDuct.setFocus()
+
+    # AddRoomTR function adds area and corresponding floor for each room entered into the RoomTableTR
+    def AddRoomTR(self):
+        row = 0
+        if self.AreaTR.toPlainText() != '':
+
+            NewArea = self.AreaTR.toPlainText()
+
+            for row in range(15):
+
+                if self.RoomTableTR.item(row, 0) is None:
+                    self.RoomTableTR.setItem(row, 0, QtWidgets.QTableWidgetItem(NewArea))
+                    RoomFloorValue = self.RoomFloor.currentText()
+                    self.RoomTableTR.setItem(row, 1, QtWidgets.QTableWidgetItem(RoomFloorValue))
+                    break
+                else:
+                    row = row + 1
+            self.AreaTR.setText('')
+        self.AreaTR.setFocus()
+
+
+
 
     # Duct function calculate the total power recommended to select the Duct Type Machine
     def Duct(self):
@@ -156,6 +187,92 @@ class MyWindow(QtWidgets.QMainWindow):
 
         self.RoomTable.setVerticalHeaderLabels(['Sala 1', 'Sala 2', 'Sala 3', 'Sala 4', 'Sala 5', 'Sala 6', 'Sala 7', 'Sala 8', 'Sala 9', 'Sala 10', 'Sala 11', 'Sala 12', 'Sala 13', 'Sala 14', 'Sala 15'])
 
+
+    # CalculateTR function calculates for each room the main parameters for the thermal floor
+    def CalculateTR(self):
+
+        PlateAreaValue = float(self.PlateArea.toPlainText())
+        OversizeValue = float(self.Oversize.toPlainText())/100
+        PipeLenghtCircuitValue = int(self.PipeLenghtCircuit.toPlainText())
+        ThermalDifValue = int(self.ThermalDif.toPlainText())
+        AreaPerCircuitValue = int(self.AreaPerCircuit.toPlainText())
+        AproxPowerValue = int(self.AproxPower.toPlainText())/1000
+        AreasTotal = 0
+        RoomPlatesTotal = 0
+        RoomPipeTotal = 0
+        RoomPowerTotal = 0
+        RoomFlowTotal = 0
+        Colector1Value = 0
+        Colector2Value = 0
+
+        Areas = []
+        Floors = []
+
+        for row in range(15):
+
+            if self.RoomTableTR.item(row, 0) is not None:
+                Item = self.RoomTableTR.item(row, 0)
+                Item_text = Item.text()
+                Areas.append(Item_text)
+                Item2 = self.RoomTableTR.item(row, 1)
+                Item2_text = Item2.text()
+                Floors.append(Item2_text)
+        Areas = [float(x) for x in Areas]
+        RoomPlates = [0] * len(Areas)
+        RoomCircuits = [0] * len(Areas)
+        RoomPipe = [0] * len(Areas)
+        RoomPower = [0] * len(Areas)
+        RoomFlow = [0] * len(Areas)
+
+        for room in range(len(Areas)):
+
+            RoomPlates[room] = Areas[room] / PlateAreaValue / (1-OversizeValue)
+            RoomPlates[room] = ceil(RoomPlates[room])
+            self.RoomTableTR.setItem(room, 2, QtWidgets.QTableWidgetItem(str(RoomPlates[room])))
+            RoomCircuits[room] = Areas[room] / AreaPerCircuitValue
+            RoomCircuits[room] = ceil(RoomCircuits[room])
+            self.RoomTableTR.setItem(room, 3, QtWidgets.QTableWidgetItem(str(RoomCircuits[room])))
+            RoomPipe[room] = (RoomCircuits[room] * PipeLenghtCircuitValue) / (1-OversizeValue)
+            self.RoomTableTR.setItem(room, 4, QtWidgets.QTableWidgetItem(str(RoomPipe[room])))
+            RoomPower[room] = Areas[room] * AproxPowerValue
+            self.RoomTableTR.setItem(room, 5, QtWidgets.QTableWidgetItem(str(RoomPower[room])))
+            RoomFlow[room] = (RoomPower[room] / (ThermalDifValue*4.18))*3.6
+            RoomFlow[room] = round(RoomFlow[room],3)
+            self.RoomTableTR.setItem(room, 6, QtWidgets.QTableWidgetItem(str(RoomFlow[room])))
+            AreasTotal += Areas[room]
+            RoomPlatesTotal += RoomPlates[room]
+            RoomPipeTotal += RoomPipe[room]
+            RoomPowerTotal += RoomPower[room]
+            RoomFlowTotal += RoomFlow[room]
+
+            if Floors[room] == '1':
+                Colector1Value += int(RoomCircuits[room])
+            else:
+                Colector2Value += int(RoomCircuits[room])
+
+        self.RoomTableTRTotal.setItem(0, 0, QtWidgets.QTableWidgetItem(str(AreasTotal)))
+        self.RoomTableTRTotal.setItem(0, 1, QtWidgets.QTableWidgetItem(str("-")))
+        self.RoomTableTRTotal.setItem(0, 2, QtWidgets.QTableWidgetItem(str(RoomPlatesTotal)))
+        self.RoomTableTRTotal.setItem(0, 3, QtWidgets.QTableWidgetItem(str(Colector1Value+Colector2Value)))
+        self.RoomTableTRTotal.setItem(0, 4, QtWidgets.QTableWidgetItem(str(RoomPipeTotal)))
+        self.RoomTableTRTotal.setItem(0, 5, QtWidgets.QTableWidgetItem(str(RoomPowerTotal)))
+        self.RoomTableTRTotal.setItem(0, 6, QtWidgets.QTableWidgetItem(str(round(RoomFlowTotal,3))))
+
+        self.Colector1.setText(str(Colector1Value))
+        self.Colector2.setText(str(Colector2Value))
+
+
+    def ResetTR(self):
+
+        self.RoomTableTR.setRowCount(0)
+        self.RoomTableTR.setRowCount(15)
+
+        self.RoomTableTR.setVerticalHeaderLabels(['Sala 1', 'Sala 2', 'Sala 3', 'Sala 4', 'Sala 5', 'Sala 6', 'Sala 7', 'Sala 8', 'Sala 9', 'Sala 10', 'Sala 11', 'Sala 12', 'Sala 13', 'Sala 14', 'Sala 15'])
+
+
+
+
+
 # Main function that initiates the application
 if __name__ == '__main__':
     import sys
@@ -167,3 +284,4 @@ if __name__ == '__main__':
 
     # Execute application
     sys.exit(app.exec_())
+
